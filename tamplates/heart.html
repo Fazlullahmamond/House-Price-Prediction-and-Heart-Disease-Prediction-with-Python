@@ -1,0 +1,206 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Home</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{%static 'assets/img/favicon.png' %}" rel="icon">
+  <link href="{%static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Vendor CSS Files -->
+  <link href="{%static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{%static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{%static 'assets/css/style.css' %}" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
+
+          <form action='H_result'>
+            <div class="form-group">
+              <div class="col-md-12">
+                <input type='number' class='form-control' placeholder='Age...' name='n1' autofocus required>
+              </div>
+            </div>
+            <br>
+            <div class="form-group">
+              <div class="col-md-12">
+                <select class='form-control' name='n2' required>
+                  <option>Select Gender*</option>
+                  <option value="1">Male</option>
+                  <option value="0">Female</option>
+                </select>
+              </div>
+            </div>
+            <br>
+            <div class="form-group">
+              <div class="col-md-12">
+                <select class='form-control' name='n3' required>
+                  <option>Select Chest Pain Type*</option>
+                  <option value="0">asymptomatic</option>
+                  <option value="1">atypical angina</option>
+                  <option value="2">pain without relation to angina</option>
+                  <option value="3">typical angina</option>
+                </select>
+              </div>
+            </div>
+            <br>
+            <div class="form-group">
+              <div class="col-md-12">
+                <input type='text' class='form-control' placeholder='resting blood pressure' name='n4' required>
+              </div>
+            </div>
+            <br> 
+
+            <div class="form-group">
+              <div class="col-md-12">
+                <input type='text' class='form-control' placeholder='Cholesterol level in mg/dl' name='n5' required>
+              </div>
+            </div>
+            <br>
+
+            <div style="color: white;">
+              <label>fasting blood sugar > 120 mg/dl : </label>
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input type="radio" class="form-check-input" value='1' name="n6">Yes
+                </label>
+              </div>
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input type="radio" class="form-check-input" value='0' name="n6">No
+                </label>
+              </div>
+            </div>
+
+            <br>
+            <div class="form-group">
+              <div class="col-md-12">
+                <select class='form-control' name='n7' required>
+                  <option>resting electrocardiography results*</option>
+                  <option value="0">probable left ventricular hypertrophy</option>
+                  <option value="1">normal</option>
+                  <option value="2">abnormalities in the T wave or ST segment</option>
+                </select>
+              </div>
+            </div>
+            <br>
+            
+            <div class="form-group">
+              <div class="col-md-12">
+                <input type='text' class='form-control' placeholder='maximum heart rate achieved' name='n8' required>
+              </div>
+            </div>
+            <br>
+            
+            <div class="form-group">
+              <div class="col-md-12">
+                <select class='form-control' name='n9' required>
+                  <option>exercise induced angina*</option>
+                  <option value="0">No</option>
+                  <option value="1">Yes</option>
+                </select>
+              </div>
+            </div>
+            <br>
+            
+            <div class="form-group">
+              <div class="col-md-12">
+                <input type='text' class='form-control' placeholder='ST depression induced by exercise relative to rest' name='n10' required>
+              </div>
+            </div>
+            <br>
+
+            <div class="form-group">
+              <div class="col-md-12">
+                <select class='form-control' name='n11' required>
+                  <option>slope of the peak exercise ST segment*</option>
+                  <option value="0">descending</option>
+                  <option value="1">flat</option>
+                  <option value="2">ascending</option>
+                </select>
+              </div>
+            </div>
+            <br>
+            
+            <div class="form-group">
+              <div class="col-md-12">
+                <select class='form-control' name='n12' required>
+                  <option>number of major vessels*</option>
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">Not Available</option>
+                </select>
+              </div>
+            </div>
+            <br>
+            
+            <div class="form-group">
+              <div class="col-md-12">
+                <select class='form-control' name='n13' required>
+                  <option>Thalium stress test result*</option>
+                  <option value="0">Not Available</option>
+                  <option value="1">fixed defect</option>
+                  <option value="2">normal blood flow</option>
+                  <option value="3">reversible defect</option>
+                </select>
+              </div>
+            </div>
+            <br>
+
+            <div class="form-group">
+              <input type='submit' class="btn btn-primary form-control">Predict</input>
+            </div>
+
+          </form>
+          <div class="form-group">
+            <a href="/index" class="btn btn-warning form-control">Go Back</a>
+          </div>
+        </div>
+
+        <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
+          <img src="{%static 'assets/img/heart.png' %}" class="img-fluid animated" alt="">
+          
+          <div class='col-md-12'>
+            <h2>{{result2}}</h2>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </section><!-- End Hero -->
+
+  <!-- Vendor JS Files -->
+  <script src="{%static 'assets/vendor/aos/aos.js' %}"></script>
+  <script src="{%static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{%static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{%static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{%static 'assets/js/main.js' %}"></script>
+
+</body>
+
+</html>

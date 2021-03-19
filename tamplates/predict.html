@@ -1,0 +1,107 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Home</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{%static 'assets/img/favicon.png' %}" rel="icon">
+  <link href="{%static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Vendor CSS Files -->
+  <link href="{%static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{%static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{%static 'assets/css/style.css' %}" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
+
+          <form action='result'>
+            <div class="form-group">
+              <div class="col-md-12">
+                <input type='text' class='form-control' placeholder='AVG Area Income' name='n1' autofocus required>
+              </div>
+            </div>
+            <br>
+            <div class="form-group">
+              <div class="col-md-12">
+                <input type='text' class='form-control' placeholder='AVG Area House Age' name='n2' required>
+              </div>
+            </div>
+            <br>
+            
+            <div class="form-group">
+              <div class="col-md-12">
+                <input type='text' class='form-control' placeholder='AVG Number Of Rooms' name='n3' required>
+              </div>
+            </div>
+            <br> 
+
+            <div class="form-group">
+              <div class="col-md-12">
+                <input type='text' class='form-control' placeholder='AVG Number Of Bedrooms' name='n4' required>
+              </div>
+            </div>
+            <br>
+
+            <div class="form-group">
+              <div class="col-md-12">
+                <input type='text' class='form-control' placeholder='AVG Area Population' name='n5' required>
+              </div>
+            </div>
+            <br>
+
+            <div class="form-group">
+              <input type='submit' class="btn btn-primary form-control">Predict</input>
+            </div>
+
+          </form>
+          <div class="form-group">
+            <a href="/index" class="btn btn-warning form-control">Go Back</a>
+          </div>
+        </div>
+
+        <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
+          <img src="{%static 'assets/img/house.png' %}" class="img-fluid animated" alt="">
+          
+          <div class='col-md-12'>
+            <h2>{{result2}}</h2>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </section><!-- End Hero -->
+
+  <!-- Vendor JS Files -->
+  <script src="{%static 'assets/vendor/aos/aos.js' %}"></script>
+  <script src="{%static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{%static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{%static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{%static 'assets/js/main.js' %}"></script>
+
+</body>
+
+</html>
