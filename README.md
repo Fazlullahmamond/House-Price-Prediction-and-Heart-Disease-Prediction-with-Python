@@ -31,7 +31,7 @@ Prerequisites:
 
 - Get the code:
     ```
-    git clone https://github.com/Fazlullahmamond/House-Price-Prediction-With-Machine-Learning-in-Python.git
+    git clone https://github.com/Fazlullahmamond/House-Price-Prediction-and-Heart-Disease-Prediction-with-Python.git
     ```
 
 ## License
